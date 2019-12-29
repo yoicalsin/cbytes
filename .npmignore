@@ -1,7 +1,13 @@
 # Folders
 /src
-/.vscode
+/.vscod
+/node_modules
 
 # Files
 .gitignore
 .npmrc
+*.map
+gulpfile.js
+tslint.json
+tsconfig.json
+.npmignore
