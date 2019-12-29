@@ -21,7 +21,7 @@ function dev() {
         .pipe(uglify())
         .pipe(sourcemaps.write('./'))
 }
-function build(cb) {
+function build() {
     return tsProject.src()
         .pipe(tsProject())
         .js.pipe(gulp.dest("dist"))
@@ -30,12 +30,22 @@ function build(cb) {
         .pipe(uglify())
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('dist'));
-
-    cb()
+}
+function message(cb, msg = `
+========================
+Server dev started
+========================
+`) {
+    return new Promise(function (resolve, reject) {
+        console.log(msg);
+        resolve()
+    })
 }
 
 gulp.task("default", function () {
-    return gulp.watch("src/index.ts", gulp.series(dev))
+    return gulp.watch("src/index.ts", gulp.series(message, dev))
 })
 
-gulp.task("prod", gulp.series(clean, build))
+gulp.task("prod", gulp.series(clean, build, () => message(null, `========================
+Build Successfully completion !
+========================`)))
