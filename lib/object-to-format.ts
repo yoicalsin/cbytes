@@ -1,4 +1,4 @@
-import { ObjectToFormat, ObjectToFormatOptions } from '../src/types';
+import { ObjectToFormat, ObjectToFormatOptions } from '../index';
 /**
  * @param obj unit, size, format
  * @param options separator
