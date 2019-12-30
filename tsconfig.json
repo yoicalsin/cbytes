@@ -1,12 +1,13 @@
 {
   "files": [
-    "src/index.ts"
+    "src/index.ts",
+    "lib/*.ts"
   ],
   "noImplicitAny": true,
   "target": "es2015",
   "compilerOptions": {
     "outDir": "./dist",
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "removeComments": true,
   }
 }
