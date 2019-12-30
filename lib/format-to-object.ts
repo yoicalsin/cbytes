@@ -1,4 +1,4 @@
-import { FormatToObjectReturn } from '../src/types';
+import { FormatToObjectReturn } from '../index';
 import { parseFormat } from './variables';
 
 /**
