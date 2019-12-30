@@ -1,4 +1,4 @@
-import { Options } from '../src/types';
+import { Options } from '../index';
 import { kb, mb, gb, tb, pb, eb, zb, yb, units } from './variables';
 
 /**
