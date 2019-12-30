@@ -1,4 +1,4 @@
-import { More } from '../src/types';
+import { More } from '../index';
 
 export const b = 0;
 export const kb = 1024; // Kibibyte
