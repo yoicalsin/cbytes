@@ -2,7 +2,7 @@
 exports.__esModule = true;
 var variables_1 = require("./variables");
 exports.toString = function (a, _a) {
-    var _b = _a === void 0 ? {} : _a, decimals = _b.decimals, _c = _b.separator, separator = _c === void 0 ? '' : _c;
+    var _b = _a === void 0 ? {} : _a, decimals = _b.decimals, _c = _b.separator, separator = _c === void 0 ? '' : _c, _d = _b.everyThousand, everyThousand = _d === void 0 ? '' : _d;
     var unit = 'B';
     var size = a;
     if ((a >= 0) && (a < variables_1.kb)) {
@@ -34,5 +34,7 @@ exports.toString = function (a, _a) {
     }
     size = a / variables_1.units[unit.toLowerCase()];
     decimals !== undefined && (size = size.toFixed(decimals));
-    return "" + size + separator + unit;
+    size = "" + size + separator + unit;
+    everyThousand !== '' && (size = size.replace(variables_1.parseThousand, everyThousand));
+    return size;
 };

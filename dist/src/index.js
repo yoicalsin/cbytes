@@ -1,9 +1,3 @@
-/*!
- * Cbytes v1.0.2 (https://github.com/yonicb/cbytes)
- * Copyright 2019 The Cbytes Authors
- * Copyright 2019 Yoni Calsin <@yonicb>.
- * Licensed under MIT (https://github.com/yonicb/cbytes/blob/master/LICENSE)
- */
 "use strict";
 exports.__esModule = true;
 var size_to_object_1 = require("../lib/size-to-object");
